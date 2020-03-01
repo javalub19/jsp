@@ -1,13 +1,11 @@
-<%@ page import="java.time.LocalDate" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%! private long visitCount = 0; %>
 <html>
 <head>
     <title>Hello World</title>
 </head>
 <body>
-<p>Dzisiaj jest: <%
-    final LocalDate now = LocalDate.now();
-    out.print(now);
-%></p>
+<p>Licznik odwiedzin: <%= ++visitCount%>
+</p>
 </body>
 </html>
