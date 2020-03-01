@@ -5,5 +5,6 @@
 </head>
 <body>
 <h3>Redirected page</h3>
+<jsp:include page="include/included.jsp"/>
 </body>
 </html>
