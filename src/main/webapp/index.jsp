@@ -6,11 +6,11 @@
 <body>
 
 <%
-    Cookie cookie = new Cookie("searchId", String.valueOf(13456));
-    cookie.setMaxAge(60 * 60 * 24);
-    response.addCookie(cookie);
+    request.getSession().invalidate();
+    session = request.getSession();
+    session.setAttribute("userId", 123456);
 %>
 
-<a href="search.jsp">search</a>
+<a href="session.jsp">session</a>
 </body>
 </html>
