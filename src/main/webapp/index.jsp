@@ -1,17 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%! private long visitCount = 0; %>
+<jsp:useBean id="calculator" class="pl.sda.jsp.utils.Calculator"/>
 <html>
 <head>
     <title>Hello World</title>
 </head>
 <body>
 
-<p>Server name: ${pageContext.request.serverName}</p>
-<p>Server port: ${pageContext.request.serverPort}</p>
-<p>Request URI: ${pageContext.request.requestURI}</p>
+<p>
+    5<sup>2</sup> wynosi:
+    <% final int square = calculator.square(5);
+        out.print(square);
+    %>
+</p>
 
-<jsp:forward page="redirected.jsp">
-    <jsp:param name="myParam" value="my parameter"/>
-</jsp:forward>
+
 </body>
 </html>
